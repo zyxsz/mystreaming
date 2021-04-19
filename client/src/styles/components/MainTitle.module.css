@@ -1,0 +1,192 @@
+.mainTitleContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainTitleContainer img {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: -2;
+}
+
+.mainTitleContainer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(2deg, var(--color-background) 28%, transparent);
+
+  z-index: -1;
+  cursor: pointer;
+}
+
+.mainTitleContainer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(40deg, var(--color-background) 40%, transparent);
+
+  z-index: -1;
+  cursor: pointer;
+}
+
+.mainTitleContent {
+  width: 100%;
+  max-width: 46.153rem;
+  height: 70%;
+  padding: 7.69rem 0 0 3.5vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTitleContent > h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.mainTitleContent > span {
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.mainTitleContent > span p {
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+  white-space: nowrap;
+}
+
+.mainTitleContent > span p:not(:last-child) {
+  margin-right: 1.53rem;
+}
+
+.mainTitleContent > p {
+  margin-top: 1.92rem;
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.mainTitleButtons {
+  margin-top: 3.07rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mainTitleButtons button {
+  flex: 1;
+  padding: 0.92rem 0;
+
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+
+  border-radius: 5px;
+  border: solid 2px var(--color-primary);
+  background-color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.mainTitleButtons button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.mainTitleButtons button:last-child {
+  background-color: transparent;
+  color: var(--color-text-secundary);
+  border-color: var(--color-text-secundary);
+}
+
+.mainTitleButtons button p {
+  color: var(--color-text-primary);
+}
+
+.mainTitleButtons button svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.mainTitleCurrentProgress {
+  width: 100%;
+  margin-top: 1.92rem;
+}
+.mainTitleCurrentProgress span {
+  display: flex;
+  align-items: center;
+}
+
+.mainTitleCurrentProgress span h1 {
+  margin: 0 5px 0 0;
+  font-size: 1.23rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  user-select: none;
+}
+
+.mainTitleCurrentProgress span p {
+  font-size: 1.23rem;
+  font-weight: normal;
+  color: var(--color-text-secundary);
+  user-select: none;
+}
+
+.mainTitleCurrentProgressBarContainer {
+  margin-top: 0.38rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTitleCurrentProgressBarContainer > p {
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.mainTitleCurrentProgressBar {
+  width: 100%;
+  height: 3px;
+  margin-right: 0.46rem;
+
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  align-items: center;
+}
+
+.mainTitleCurrentProgressBar div {
+  height: 3px;
+
+  border-radius: 2px;
+  background-color: var(--color-primary);
+}

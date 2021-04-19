@@ -1,0 +1,24 @@
+.titlesRowContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.titlesRowContainer:not(:first-child) {
+  margin-top: 1.53rem;
+}
+
+.titlesRowContainer h1 {
+  margin: 0 0 1.769rem 0.384rem;
+  font-size: 1.69rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.titlesRowSlider {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: no-wrap;
+}

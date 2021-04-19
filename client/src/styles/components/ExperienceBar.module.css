@@ -1,0 +1,45 @@
+.experienceBarContainer {
+  width: 100%;
+  margin-top: 15px;
+
+  display: flex;
+  align-items: center;
+}
+
+.experienceBarContainer p,
+.experienceBarContainer span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+  white-space: nowrap;
+}
+
+.experienceBar {
+  flex: 1;
+  height: 4px;
+  margin: 0 1rem;
+
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.experienceBarProgress {
+  position: relative;
+}
+
+.experienceBarProgress div {
+  height: 4px;
+
+  border-radius: 4px;
+  background-color: var(--color-primary);
+
+  transition: 0.5s width ease-in-out;
+}
+
+.experienceBarProgress span {
+  position: absolute;
+  top: 10px;
+
+  transform: translateX(-50%);
+  transition: 0.5s left ease-in-out;
+}

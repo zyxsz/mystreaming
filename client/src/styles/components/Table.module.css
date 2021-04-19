@@ -1,0 +1,71 @@
+.table {
+  width: 100%;
+  border-spacing: 0px 8px;
+}
+
+.table th {
+  padding: 20px 30px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 24px;
+
+  color: var(--color-text-secundary);
+  cursor: pointer;
+}
+
+.table th svg,
+.table td svg {
+  width: 12px;
+  height: 12px;
+
+  vertical-align: middle;
+  cursor: pointer;
+}
+.table td svg {
+  margin-right: 10px;
+}
+
+.table td {
+  padding: 20px 15px;
+
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-light-secundary);
+}
+
+.table td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.table td:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.table td a {
+  padding: 1rem 2rem;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-primary);
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.table td a:hover {
+  text-decoration: underline var(--color-primary);
+}
+
+.tableFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

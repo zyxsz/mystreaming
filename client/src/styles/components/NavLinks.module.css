@@ -1,0 +1,114 @@
+.navLinksContainer {
+  width: 100%;
+  height: 60px;
+
+  background-color: var(--color-secundary);
+
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.navLinksContentWrapper {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLinksContentWrapper ul {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.navLinksContentWrapper a,
+.navLinksContentWrapper button {
+  position: relative;
+  height: 100%;
+  padding: 0 15px;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.3s;
+}
+
+.navLinksContentWrapper a:hover,
+.navLinksContentWrapper button:hover {
+  /* color: var(--color-primary); */
+}
+
+.navLinksContentWrapper a:not(:first-child),
+.navLinksContentWrapper button:not(:first-child) {
+  margin-left: 3rem;
+}
+
+.navLinksContentWrapper a:before,
+.navLinksContentWrapper button:before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 0px;
+  height: 3px;
+
+  border-radius: 3px 3px 0 0;
+  background: var(--color-primary);
+
+  transition: width 0.3s;
+}
+
+.navLinksContentWrapper a:hover:before,
+.navLinksContentWrapper button:hover:before {
+  width: 100%;
+  background-color: var(--color-primary-hover);
+}
+
+.navLinksContentWrapper a.navLinksLinkActive:before,
+.navLinksContentWrapper button.navLinksLinkActive:before {
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.navLinksContentWrapper button.navLinksLinkLogout:before {
+  background-color: #ff0f05;
+}
+
+.navLinksContentWrapper a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  transition: 0.3s;
+}
+
+.navLinksContentWrapper a:hover svg,
+.navLinksContentWrapper a.navLinksLinkActive svg {
+  color: var(--color-primary);
+}
+
+.navLinksContentWrapper button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+
+  transition: 0.3s;
+}
+
+.navLinksContentWrapper button:hover svg {
+  color: #ff0f05;
+}

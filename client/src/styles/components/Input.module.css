@@ -1,0 +1,23 @@
+.inputContainer {
+  margin-left: 0.384rem;
+  margin-right: 0.384rem;
+  padding: 0.79rem 1.15rem !important;
+
+  flex: 1;
+
+  background-color: var(--color-secundary-hover);
+  border: solid 2px rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+
+  font-size: 1.07rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+
+  transition: border-color 0.3s linear;
+  cursor: pointer;
+}
+
+.inputContainer:focus,
+.inputContainer:focus-within {
+  border-color: rgba(255, 255, 255, 0.2);
+}

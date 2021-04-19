@@ -1,0 +1,75 @@
+.serverListContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.serverCard {
+  min-width: 620px;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  border: solid 2px transparent;
+  border-radius: 5px;
+  background-color: var(--color-secundary);
+
+  transition: 150ms border-color linear;
+  cursor: pointer;
+}
+
+.serverCard:hover {
+  border-color: var(--color-primary);
+}
+
+.serverCardIcon {
+  border-radius: 50%;
+}
+
+.serverCard figure {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+  background-color: #36393f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.8rem;
+  line-height: 22px;
+  color: var(--color-text-primary);
+
+  user-select: none;
+}
+
+.serverCard span {
+  margin-left: 10px;
+}
+
+.serverCard span p:first-child {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+/* .serverCard span p:last-child {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+  white-space: nowrap;
+} */
+
+@media (max-width: 720px) {
+  .serverCard {
+    min-width: 100%;
+  }
+  .serverCard span p:last-child {
+    white-space: break-spaces;
+  }
+}

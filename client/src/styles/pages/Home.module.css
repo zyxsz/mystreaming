@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  max-width: 95vw;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1.53rem 0.769rem 1.53rem 0.769rem;
+  transform: translateY(-21.53rem);
+}

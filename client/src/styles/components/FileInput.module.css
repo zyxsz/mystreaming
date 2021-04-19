@@ -1,0 +1,31 @@
+.fileInputContainer {
+  width: calc(100% - 0.9rem);
+  height: 150px;
+
+  margin-top: 0.769rem !important;
+  margin-left: 0.384rem;
+  margin-right: 0.384rem;
+  padding: 0.79rem 1.15rem !important;
+
+  background-color: var(--color-secundary-hover);
+  border: dashed 2px rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.fileInputContainer p {
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.fileInputContainer input {
+  display: none;
+  opacity: 0;
+}

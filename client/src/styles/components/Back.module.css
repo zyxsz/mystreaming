@@ -1,0 +1,21 @@
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-secundary);
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  transition: 0.3s;
+}
+
+.backButton svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.backButton:hover {
+  opacity: 0.5;
+}

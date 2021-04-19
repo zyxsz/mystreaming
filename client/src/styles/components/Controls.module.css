@@ -1,0 +1,454 @@
+.playerControls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 4.6rem 2.3rem 4.6rem;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 80%),
+    rgba(255, 0, 0, 0%) 70.71%
+  );
+
+  z-index: 21;
+  transition: 0.3s;
+}
+
+.playerControlsSmall {
+  position: absolute;
+  left: 0.769rem;
+  right: 0.769rem;
+  bottom: 0.769rem;
+  padding: 0;
+
+  background: transparent;
+}
+
+.hiddeControls {
+  transform: translateY(120%);
+}
+
+.playerButtons {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playerButtonsLeft > button,
+.playerButtonsRight > button {
+  position: relative;
+  font-size: 0;
+  color: var(--color-text-primary);
+  transition: 0.3s;
+  z-index: 30;
+}
+
+.playerControlsSmall .playerButtonsLeft > button > svg,
+.playerControlsSmall .playerButtonsRight > button > svg {
+  width: 25px;
+  height: 25px;
+}
+
+.playerControlsSmall .playerButtons .playerButtonsLeft button:nth-child(4) svg {
+  width: 20px;
+  height: 20px;
+}
+
+.playerButtonsLeft > button > svg,
+.playerButtonsRight > button > svg {
+  width: 45px;
+  height: 45px;
+  fill: #fff;
+  stroke: var(--color-text-primary);
+  stroke-width: 0;
+}
+
+.playerButtons .playerButtonsLeft button:nth-child(4) svg {
+  width: 40px;
+  height: 40px;
+}
+
+.playerControlsSmall .playerButtonsLeft > button:not(:last-child),
+.playerControlsSmall .playerButtonsRight > button:not(:last-child) {
+  margin-right: 1.153rem;
+}
+
+.playerButtonsLeft > button:not(:last-child),
+.playerButtonsRight > button:not(:last-child) {
+  margin-right: 1.91rem;
+}
+
+.playerButtonsLeft > button:hover,
+.playerButtonsRight > button:hover {
+  transform: scale(1.2);
+}
+
+.playerButtonsLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playerControlsSmall .playerVolumeButton:hover .playerVolumeContainer {
+  transform: scale(0.5) translateY(-100%) translateX(-50%);
+}
+
+.playerControlsSmall .playerVolumeContainer {
+  top: -240%;
+  left: -30%;
+}
+.playerVolumeButton:hover .playerVolumeContainer {
+  opacity: 1;
+  transform: scale(1) translateY(-100%) translateX(-50%);
+  transition: transform 0s linear, opacity 0.3s linear;
+}
+
+.playerVolumeContainer {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  right: 0;
+
+  width: 65px;
+  padding: 0.769rem 0.769rem;
+
+  background-color: #161619;
+  border-radius: 3px;
+
+  transform: scale(0) translateY(-100%) translateX(-50%);
+  transition: transform 0s 0.2s ease-in-out, opacity 0.3s linear;
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.playerVolumeContainer > div {
+  position: relative;
+
+  width: 100%;
+  height: 150px;
+}
+
+.playerButtonsLeft span {
+  display: flex;
+  align-items: center;
+}
+
+.playerButtonsLeft span h1 {
+  margin: 0 5px 0 0.769rem;
+  font-size: 1.46rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  user-select: none;
+}
+
+.playerButtonsLeft span p {
+  font-size: 1.46rem;
+  font-weight: normal;
+  color: var(--color-text-secundary);
+  user-select: none;
+}
+
+.playerButtonsRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.playerEpisodes:hover .playerEpisodesContainer {
+  opacity: 1;
+  transform: scale(0.8) translateY(-100%);
+  transition: transform 0s linear, opacity 0.3s linear;
+}
+
+.playerEpisodesContainer {
+  position: absolute;
+  top: -90%;
+  right: -50%;
+
+  width: 38.4rem;
+  height: 100%;
+  min-height: 27.61rem;
+
+  background-color: #161619;
+  border-radius: 3px;
+
+  transform: scale(0) translateY(-100%);
+  transition: transform 0s 0.4s ease-in-out, opacity 0.3s linear;
+  opacity: 0;
+
+  z-index: 50;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.playerEpisodesContainer > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.playerEpisodesContainer header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1.153rem 1.53rem;
+
+  border-radius: 5px 5px 0 0;
+  background-color: #1b1b1e;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.playerEpisodesContent {
+  padding-top: 0.769rem;
+}
+
+.playerEpisodesContainer header:hover {
+  background-color: #1d1d20;
+}
+
+.playerEpisodesContainer header > svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  color: var(--color-text-primary);
+}
+
+.playerEpisodesContainer header > h1 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.playerEpisodesVideosContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.playerEpisode {
+  padding: 0.769rem 1.53rem;
+
+  display: flex;
+  transition: background 0.2s linear;
+}
+
+.playerEpisode:hover {
+  background: #19191c;
+}
+
+.playerEpisode:hover > figure div {
+  opacity: 1;
+}
+
+.playerEpisode figure {
+  position: relative;
+
+  width: 12.3rem;
+  margin-right: 0.769rem;
+
+  border-radius: 3px;
+}
+
+.playerEpisodePlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.playerEpisodePlay svg {
+  width: 3.84rem;
+  height: 3.84rem;
+
+  fill: var(--color-text-primary);
+  stroke: var(--color-text-primary);
+  stroke-width: 0;
+  color: var(--color-text-primary);
+}
+
+.playerEpisode figure img {
+  width: 12.3rem;
+  height: 100%;
+  min-height: 7.307rem;
+
+  border-radius: 3px;
+}
+
+.playerEpisodeInfos {
+  width: 100%;
+  padding: 0.769rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.playerEpisodeInfos h3 {
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.playerEpisodeInfos h4 {
+  margin-top: 0.5rem;
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.playerSeasons {
+  width: 100%;
+}
+
+.playerSeasons > div {
+  padding: 1.153rem 1.53rem;
+
+  border-radius: 5px 5px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playerSeasons > div:hover {
+  background: #1b1b1e;
+}
+
+.playerSeasons div > svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  color: var(--color-text-primary);
+}
+
+.playerSeasons div > h1 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.playerEpisodeProgress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 4px;
+
+  border-radius: 0 0 2px 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.playerEpisodeProgress > div {
+  height: 4px;
+
+  border-radius: 0 0 2px 2px;
+  background-color: var(--color-primary);
+}
+
+.playerEpisodeActive,
+.playerEpisodeActive:hover {
+  background: #1d1d20;
+}
+.playerEpisodeActive > figure div {
+  opacity: 1;
+}
+
+.playerLanguage:hover .playerLanguageContainer {
+  opacity: 1;
+  transform: scale(1) translateY(-100%) translateX(-50%);
+  transition: transform 0s linear, opacity 0.3s linear;
+}
+
+.playerLanguageContainer {
+  position: absolute;
+  top: -26%;
+  right: -430%;
+
+  width: 385px;
+  max-height: 12rem;
+  min-height: 160px;
+  padding-bottom: 0.769rem;
+
+  display: flex;
+
+  background-color: #161619;
+  border-radius: 3px;
+
+  transform: scale(0) translateY(-100%) translateX(-50%);
+  transition: transform 0s 0.2s ease-in-out, opacity 0.3s linear;
+  opacity: 0;
+
+  overflow: auto;
+  cursor: pointer;
+}
+
+.playerLanguageColumn {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+}
+
+.playerLanguageColumn h1 {
+  margin-bottom: 5px;
+  padding: 0.769rem 0.769rem 0.769rem calc(1.769rem + 30px);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.playerLanguageRow {
+  width: 100%;
+  padding: 0.569rem 0.769rem 0.569rem 1.769rem;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.playerLanguageRow:hover {
+  background: #1b1b1e;
+}
+
+.playerLanguageRow p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.playerLanguageRow svg {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+}
+
+.playerLanguageRowSelected p {
+  color: var(--color-text-primary);
+}
+
+.playerLanguageRowSelected svg {
+  color: var(--color-text-primary);
+}

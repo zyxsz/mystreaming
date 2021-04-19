@@ -1,0 +1,45 @@
+.profileUserContainer {
+  width: 100%;
+  max-width: 300px;
+
+  padding: 2rem 3rem;
+
+  border-radius: 5px;
+  background-color: var(--color-secundary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.profileUserAvatar {
+  width: 130px;
+  height: 130px;
+  padding: 5px;
+
+  border-radius: 50%;
+  border: solid 3px var(--color-primary);
+}
+
+.profileUserAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profileUserContainer h2 {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.profileUserContainer h3 {
+  /* margin-top: 1rem; */
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}

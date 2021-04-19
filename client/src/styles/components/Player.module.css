@@ -1,0 +1,102 @@
+.playerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: #000;
+
+  z-index: 20;
+  cursor: pointer;
+}
+
+.playerContainerHiddenCursor {
+  cursor: none;
+}
+
+.playerContainerSmall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.playerContainer video {
+  width: 100%;
+  height: 100%;
+
+  outline: 0;
+  border: 0;
+}
+
+.playerHeader {
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+
+  z-index: 21;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 2rem 1rem;
+
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.backButton svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.backButton p {
+  width: 0px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.backButton:hover {
+  opacity: 0.6;
+}
+
+.backButton:hover p {
+  width: 280px;
+}
+
+.playerSubtitleContainer {
+  position: fixed;
+  bottom: 11rem;
+  left: 50%;
+  z-index: 21;
+  transform: translateX(-50%);
+  transition: 0.2s;
+}
+
+.playerSubtitleContainer p,
+.playerSubtitleContainer font {
+  font-size: 29px;
+  text-shadow: #000000 0px 0px 7px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.playerSubtitleContainer b {
+  font-weight: 400;
+}
+
+.playerSubtitleContainerHiddeControls {
+  bottom: 3rem;
+}

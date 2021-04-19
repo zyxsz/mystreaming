@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  max-width: 1570px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.container header {
+  padding-bottom: 2rem;
+  margin: 3rem 0 2rem 0;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.container header > h1 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.container header > p {
+  font-size: 1.26rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.containerBackButton {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.containerBackButton svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.containerBackButton:hover {
+  color: var(--color-text-primary);
+}

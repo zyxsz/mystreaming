@@ -1,0 +1,498 @@
+.titlesList {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titleContainer {
+  position: relative;
+
+  min-width: 21rem;
+  max-width: 26rem;
+
+  height: 100%;
+  min-height: 12rem;
+  max-height: 15rem;
+
+  flex: 1;
+
+  margin: 0.5rem;
+
+  cursor: pointer;
+}
+
+.titleContainer:after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 98%;
+
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.titleContainer:hover:after {
+  opacity: 1;
+}
+
+.titleContainer img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 1rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+.modalContent {
+  position: relative;
+
+  width: 100%;
+  max-width: 72.3rem;
+  height: 100%;
+
+  border-radius: 5px;
+  background-color: var(--color-secundary);
+
+  overflow-x: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.53rem;
+  right: 1.53rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+  background-color: var(--color-secundary-hover);
+  color: var(--color-text-secundary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s linear;
+  z-index: 5;
+}
+
+.closeButton:hover {
+  background-color: var(--color-secundary);
+}
+
+.closeButton svg {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.modalContent > header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 40.69rem;
+}
+
+.modalContent > header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(0deg, var(--color-secundary) 15%, transparent);
+  z-index: 3;
+}
+
+.playerContainer {
+  z-index: auto;
+}
+
+.playerContainer,
+.playerContainer video {
+  border-radius: 5px 5px 0 0;
+}
+
+.controls {
+  bottom: 7.69rem;
+  left: 1.92rem;
+  right: 1.92rem;
+  z-index: 4;
+}
+
+.controls button svg {
+  width: 2.69rem !important;
+  height: 2.69rem !important;
+}
+
+.controls button > div {
+  top: -160% !important;
+  left: 0% !important;
+}
+
+.modalContent header > div {
+  width: 100%;
+  max-width: 100%;
+  height: 80%;
+  padding: 1.92rem 0 0 1.92rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.modalContainer header > div > span {
+  width: 100%;
+  max-width: 32.3rem;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modalContent header > div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+
+  background: linear-gradient(55deg, rgba(22, 22, 25, 0.7) 38%, transparent);
+  z-index: -1;
+}
+
+.modalContent header > div > span > h1 {
+  font-size: 1.53rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.modalContent header > div > span > p {
+  margin-top: 1.5rem;
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.modalTabs {
+  position: relative;
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modalTabs button {
+  padding: 1.53rem 2.307rem;
+
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.modalTabs span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 3px;
+
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s;
+}
+
+.modalTabContent {
+  width: 100%;
+}
+
+.episodesContainer {
+}
+
+.episodesContainer > header {
+  padding: 1.53rem 2.3rem;
+
+  border-bottom: solid 2px var(--color-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+.episodesContainer > header h1 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.episodeList {
+  margin-top: 0.769rem;
+}
+
+.episodeContainer {
+  padding: 0.769rem 1.53rem;
+
+  display: flex;
+  transition: background 0.2s linear;
+
+  cursor: pointer;
+}
+
+.episodeContainer:hover {
+  background: #1d1d20;
+}
+
+.episodeContainer:hover > figure div {
+  opacity: 1;
+}
+
+.episodeContainer figure {
+  position: relative;
+
+  width: 14.3rem;
+  margin-right: 1rem;
+
+  border-radius: 3px;
+}
+
+.episodeContainer figure img {
+  width: 14.3rem;
+  height: 100%;
+  min-height: 7.3rem;
+
+  border-radius: 3px;
+}
+
+.episodePlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.episodePlay svg {
+  width: 3.84rem;
+  height: 3.84rem;
+
+  fill: var(--color-text-primary);
+  stroke: var(--color-text-primary);
+  stroke-width: 0;
+  color: var(--color-text-primary);
+}
+
+.episodeInfos {
+  padding: 0.76rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.episodeInfos h3 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.episodeInfos h4 {
+  margin-top: 0.5rem;
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.episodeProgress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 4px;
+
+  border-radius: 0 0 2px 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.episodeProgress > div {
+  height: 4px;
+
+  border-radius: 0 0 2px 2px;
+  background-color: var(--color-primary);
+}
+
+.addVideoForm {
+  margin-top: 1.15rem;
+  padding: 0.79rem 1.53rem 3.25rem 1.53rem;
+}
+
+.addVideoForm > h1 {
+  margin-left: 0.384rem;
+  margin-bottom: 1.46rem;
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.addVideoForm > div {
+  margin-left: 0.384rem;
+  margin-right: 0.384rem;
+}
+
+.addVideoForm > div:not(:last-child) {
+  margin-bottom: 0.769rem !important;
+}
+
+.formButton {
+  width: calc(100% - 0.9rem);
+  height: 100%;
+  margin-top: 0.769rem !important;
+  margin-left: 0.384rem;
+  margin-right: 0.384rem;
+  padding: 0.79rem 1.15rem !important;
+
+  background: var(--color-primary);
+  border-radius: 3px;
+
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.addModalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+
+.progressContainer {
+  width: 650px;
+  height: 20px;
+  /* padding: 2px; */
+
+  border-radius: 10px;
+  background: var(--color-background);
+}
+
+.progressContainer div {
+  height: 100%;
+
+  background-color: var(--color-primary);
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.addModalContainer h1 {
+  margin-top: 25px;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.addModalContainer p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.episodeProcessing {
+  flex: 1;
+  padding: 0.76rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.episodeProcessing span {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.episodeProcessingRow {
+  flex-direction: row;
+  margin-top: 7px;
+}
+
+.episodeProcessing span p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.episodeProcessing span p:last-child {
+  margin-left: 5px;
+  color: var(--color-text-secundary);
+}
+
+.episodeProcessing h3 {
+  font-size: 1.46rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.episodeProcessing h4 {
+  margin-top: 0.5rem;
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}

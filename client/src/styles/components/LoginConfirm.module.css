@@ -1,0 +1,139 @@
+.confirmContainer {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+
+  border-radius: 5px;
+  background-color: var(--color-secundary);
+}
+
+.confirmContainer header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirmUser {
+  display: flex;
+  align-items: center;
+}
+
+.confirmUser img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  padding: 4px;
+
+  border-radius: 50%;
+  border: solid 4px var(--color-primary);
+}
+
+.confirmUser span p:first-child {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-text-primary);
+}
+
+.confirmUser span p:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.userSpecs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.userSpec {
+  text-align: end;
+}
+
+.userSpec:not(:first-child) {
+  margin-top: 10px;
+}
+
+.userSpec p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-secundary);
+}
+
+.userSpec p > svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
+  color: var(--color-primary);
+}
+
+.userSpec strong {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-text-primary);
+}
+
+.policyText {
+  margin: 25px 0;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+
+  text-align: center;
+}
+.policyText a,
+.policyText strong {
+  color: var(--color-primary);
+}
+
+.policyText a {
+  text-decoration: underline var(--color-primary);
+}
+
+.buttonList {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonList button {
+  width: 100%;
+  padding: 15px 30px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  border: solid 2px var(--color-primary);
+
+  transition: 0.3s;
+}
+
+.buttonList button:first-child {
+  background-color: transparent;
+}
+
+.buttonList button:last-child {
+  margin-left: 10px;
+}
+
+.buttonList button:last-child:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.buttonList button:first-child:hover {
+  border-color: var(--color-primary-hover);
+  opacity: 0.5;
+}
